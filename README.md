@@ -3,6 +3,10 @@
 <img width="797" alt="image" src="https://github.com/Kanoopz/ethDenver24/assets/43384993/1eb76f35-61a9-4248-8c08-ed14681ea52e">
 
 
+<img width="654" alt="image" src="https://github.com/Kanoopz/ethDenver24/assets/43384993/29eae6fb-7705-409c-83e1-cd25663a644d">
+
+
+
 # orbitDeployedContracts:
 
 ERC6551Registry
