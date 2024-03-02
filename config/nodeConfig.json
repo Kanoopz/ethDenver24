@@ -1,0 +1,80 @@
+{
+  "chain": {
+    "info-json": "[{\"chain-id\":20620126203,\"parent-chain-id\":421614,\"parent-chain-is-arbitrum\":true,\"chain-name\":\"ethereanChainV3\",\"chain-config\":{\"homesteadBlock\":0,\"daoForkBlock\":null,\"daoForkSupport\":true,\"eip150Block\":0,\"eip150Hash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"eip155Block\":0,\"eip158Block\":0,\"byzantiumBlock\":0,\"constantinopleBlock\":0,\"petersburgBlock\":0,\"istanbulBlock\":0,\"muirGlacierBlock\":0,\"berlinBlock\":0,\"londonBlock\":0,\"clique\":{\"period\":0,\"epoch\":0},\"arbitrum\":{\"EnableArbOS\":true,\"AllowDebugPrecompiles\":false,\"DataAvailabilityCommittee\":true,\"InitialArbOSVersion\":11,\"GenesisBlockNum\":0,\"MaxCodeSize\":24576,\"MaxInitCodeSize\":49152,\"InitialChainOwner\":\"0x5d4d46902D396f7a4C628D463C62F66C4C2686cc\"},\"chainId\":20620126203},\"rollup\":{\"bridge\":\"0x9cF17112E0a70b9dC0B249e004b7F870f55185e6\",\"inbox\":\"0xf1120d1Fb69B16cF5b8E4aD28e440f3eb0A81253\",\"sequencer-inbox\":\"0x77e6c9F6aD0e8164Bc5dBCBA0637B153B7e6807b\",\"rollup\":\"0x9Ff144D1506AdB23d9723C9044384FA7594911af\",\"validator-utils\":\"0xB11EB62DD2B352886A4530A9106fE427844D515f\",\"validator-wallet-creator\":\"0xEb9885B6c0e117D339F47585cC06a2765AaE2E0b\",\"deployed-at\":19232899}}]",
+    "name": "ethereanChainV3"
+  },
+  "parent-chain": {
+    "connection": {
+      "url": "https://sepolia-rollup.arbitrum.io/rpc"
+    }
+  },
+  "http": {
+    "addr": "0.0.0.0",
+    "port": 8449,
+    "vhosts": [
+      "*"
+    ],
+    "corsdomain": [
+      "*"
+    ],
+    "api": [
+      "eth",
+      "net",
+      "web3",
+      "arb",
+      "debug"
+    ]
+  },
+  "node": {
+    "sequencer": true,
+    "delayed-sequencer": {
+      "enable": true,
+      "use-merge-finality": false,
+      "finalize-distance": 1
+    },
+    "batch-poster": {
+      "max-size": 90000,
+      "enable": true,
+      "parent-chain-wallet": {
+        "private-key": "b4fd7ae8cd11640a72d4d1f6543aea69df1f9f888ae5ae3812fd90806b8b6226"
+      }
+    },
+    "staker": {
+      "enable": true,
+      "strategy": "MakeNodes",
+      "parent-chain-wallet": {
+        "private-key": "5db8755c871838348815fc9d9e329553a6863a89dc1536819f96c6d098783e0e"
+      }
+    },
+    "dangerous": {
+      "no-sequencer-coordinator": true
+    },
+    "data-availability": {
+      "enable": true,
+      "sequencer-inbox-address": "0x77e6c9F6aD0e8164Bc5dBCBA0637B153B7e6807b",
+      "parent-chain-node-url": "https://sepolia-rollup.arbitrum.io/rpc",
+      "rest-aggregator": {
+        "enable": true,
+        "urls": [
+          "http://localhost:9877"
+        ]
+      },
+      "rpc-aggregator": {
+        "enable": true,
+        "assumed-honest": 1,
+        "backends": "[{\"url\":\"http://localhost:9876\",\"pubkey\":\"YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\",\"signermask\":1}]"
+      }
+    }
+  },
+  "execution": {
+    "forwarding-target": "",
+    "sequencer": {
+      "enable": true,
+      "max-tx-data-size": 85000,
+      "max-block-speed": "250ms"
+    },
+    "caching": {
+      "archive": true
+    }
+  }
+}
