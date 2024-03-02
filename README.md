@@ -6,7 +6,7 @@
 playableNftsArquitecture
 
 
-<img width="654" alt="image" src="https://github.com/Kanoopz/ethDenver24/assets/43384993/29eae6fb-7705-409c-83e1-cd25663a644d">
+<img width="749" alt="image" src="https://github.com/Kanoopz/ethDenver24/assets/43384993/1544e66a-9f06-496f-a181-9dda80ccd6f8">
 
 
 
