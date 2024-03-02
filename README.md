@@ -1,3 +1,16 @@
+orbitDeployedContracts:
+
+Door
+	0xe0F9216249360aA2A1Ce62bfB4bA434f3d8CE430
+Weapon
+	0x7304177aB3ffbEA5E91c79697a8FF89ED0281F3F
+specialAbility
+	0x4068923b7C50470ABf90BfAA30a09674ad81b7B7
+	
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
 # orbit-setup-script
 
 These scripts will help you fund newly generated batch-poster and validator addresses, configure an Orbit chain, and deploy bridge contracts on both L2 and L3 chains.
